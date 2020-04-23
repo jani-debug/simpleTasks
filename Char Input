@@ -1,0 +1,18 @@
+# from https://www.practicepython.org
+
+#Create a program that asks the user to enter their name and their age. Print out a message addressed to them 
+#that tells them the year that they will turn 100 years old.
+
+def compute100(age,thisyear):
+    if thisyear==True:
+        return 2120-int(age)
+    else:
+        return 2119-int(age)
+    
+name = input('Hey, what is your name? ')
+age = input('How old are you now? ')
+thisyear = input('Did you already celebrate your birthday this year? (0=no, 1=yes)')
+numdisp = input('How many times would you like me to tell you when your 100th birthday is? ')
+x100th = compute100(age,thisyear)
+resstr = 'Okay '+str(name)+', your 100th birthday will be in year '+str(x100th)+', congrats! \n'
+print(int(numdisp)*resstr)
